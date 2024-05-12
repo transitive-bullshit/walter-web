@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <em>Agentic discovery, evaluation, and recommendations for AI-native products</em>
+  <em>Agentic recommendations for AI-native products...</em>
 </p>
 
 <p align="center">

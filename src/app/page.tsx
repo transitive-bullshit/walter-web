@@ -1,11 +1,8 @@
 import { GitHub, Twitter } from '@/icons'
-import { bootstrap } from '@/lib/bootstrap'
 import * as config from '@/lib/config'
 
 import styles from './page.module.css'
 import { Simulation } from './simulation'
-
-bootstrap()
 
 export default function App() {
   return (

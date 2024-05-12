@@ -13,7 +13,7 @@ export const twitter = 'transitive_bs'
 export const twitterUrl = `https://twitter.com/${twitter}`
 export const copyright = `Copyright 2024 ${author}`
 export const madeWithLove = 'Made with ❤️ in Brooklyn, NY'
-export const githubUrl = 'https;//github.com/transitive-bullshit/walter-web'
+export const githubUrl = 'https://github.com/transitive-bullshit/walter-web'
 
 export const port = process.env.PORT || '3000'
 export const prodUrl = `https://${domain}`

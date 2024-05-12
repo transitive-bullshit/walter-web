@@ -13,13 +13,11 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { EffectComposer, N8AO, TiltShift2 } from '@react-three/postprocessing'
 import { easing } from 'maath'
 import { createBreakpoint } from 'react-use'
-import { suspend } from 'suspend-react'
 
 import { bootstrap } from '@/lib/bootstrap'
+import inter from '@/lib/inter-regular.woff'
 
 import styles from './page.module.css'
-
-const inter = import('@pmndrs/assets/fonts/inter_regular.woff')
 
 const useBreakpoint = createBreakpoint()
 
@@ -131,7 +129,7 @@ function Status(props: any) {
     <Text
       fontSize={14}
       letterSpacing={-0.025}
-      font={(suspend(inter) as any).default}
+      font={inter}
       color='black'
       {...props}
     >

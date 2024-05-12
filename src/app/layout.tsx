@@ -1,6 +1,7 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import cs from 'clsx'
 import { Inter } from 'next/font/google'
 
@@ -22,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cs(inter.className, styles.body)}>{children}</body>
+      <body className={cs(inter.className, styles.body)}>
+        {children}
+
+        <Analytics />
+      </body>
     </html>
   )
 }

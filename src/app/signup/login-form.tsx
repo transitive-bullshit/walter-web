@@ -28,7 +28,7 @@ import { Input } from '@/components/ui/input'
 import { signup } from './signup'
 
 export const signupSchema = z.object({
-  email: z.string()
+  email: z.string().email()
 })
 export type SignupSchema = z.infer<typeof signupSchema>
 
@@ -42,11 +42,7 @@ export function LoginForm() {
     }
   })
 
-  console.log('LoginForm', { isPending, result })
-
   async function onSubmit(data: SignupSchema) {
-    console.log('submit', data)
-
     try {
       setIsPending(true)
       const res = await signup(data)

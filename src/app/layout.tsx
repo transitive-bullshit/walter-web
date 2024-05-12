@@ -2,14 +2,14 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import cs from 'clsx'
 import { Inter } from 'next/font/google'
 
 import * as config from '@/lib/config'
+import { cn } from '@/lib/utils'
 
 import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
   title: config.title,
@@ -23,7 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cs(inter.className, styles.body)}>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          inter.variable,
+          styles.body
+        )}
+      >
         {children}
 
         <Analytics />

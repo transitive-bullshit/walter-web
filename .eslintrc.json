@@ -2,6 +2,7 @@
   "root": true,
   "extends": ["@fisch0920/eslint-config", "next/core-web-vitals"],
   "rules": {
-    "no-process-env": "off"
+    "no-process-env": "off",
+    "import/no-anonymous-default-export": "off"
   }
 }

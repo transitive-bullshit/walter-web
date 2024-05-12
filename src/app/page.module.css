@@ -19,7 +19,6 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  padding: 12px;
 
   display: flex;
   flex-direction: column;
@@ -30,14 +29,35 @@
   flex: 1;
 }
 
+.header,
 .footer {
-  pointer-events: auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.headerContent,
+.footerContent {
+  pointer-events: auto;
+  align-self: center;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
+}
+
+.rhs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  gap: qem;
 }
 
 .copyright,
@@ -46,12 +66,20 @@
 }
 
 .desc {
+  flex: 1;
   font-style: italic;
+  text-align: center;
+}
+
+.copyright,
+.social {
+  flex: 0.5;
 }
 
 .social {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
@@ -60,21 +88,39 @@
   height: 1.5em;
 }
 
+.logo {
+  width: auto;
+  height: 32px;
+}
+
+.navHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-w-1);
+
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 500px) {
-  .footer {
+  .footerContent {
     flex-direction: column;
+    gap: 0.5em;
   }
 
-  .footer .social {
+  .footerContent .social {
     justify-content: center;
     order: 1;
   }
 
-  .footer .desc {
+  .footerContent .desc {
     order: 2;
   }
 
-  .footer .copyright {
+  .footerContent .copyright {
     justify-content: center;
     order: 3;
   }

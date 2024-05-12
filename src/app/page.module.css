@@ -91,6 +91,7 @@
 .logo {
   width: auto;
   height: 32px;
+  user-select: none;
 }
 
 .navHeader {

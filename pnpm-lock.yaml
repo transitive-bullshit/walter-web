@@ -35,9 +35,6 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
-  i:
-    specifier: ^0.3.7
-    version: 0.3.7
   ioredis:
     specifier: ^5.4.1
     version: 5.4.1
@@ -2654,11 +2651,6 @@ packages:
 
   /hyphenate-style-name@1.0.4:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
-    dev: false
-
-  /i@0.3.7:
-    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
-    engines: {node: '>=0.4'}
     dev: false
 
   /ieee754@1.2.1:

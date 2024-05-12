@@ -22,6 +22,8 @@ function Overlay() {
       <footer className={styles.footer}>
         <div className={styles.copyright}>{config.copyright}</div>
 
+        <div className={styles.desc}>Coming summer 2024</div>
+
         <div className={styles.social}>
           <a href={config.twitterUrl} target='_blank' rel='noopener noreferrer'>
             <Twitter className={styles.icon} />

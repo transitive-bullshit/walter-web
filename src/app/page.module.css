@@ -40,8 +40,13 @@
   gap: 1rem;
 }
 
-.copyright {
+.copyright,
+.desc {
   font-size: 80%;
+}
+
+.desc {
+  font-style: italic;
 }
 
 .social {
@@ -62,6 +67,10 @@
 
   .footer .social {
     justify-content: center;
+    order: 1;
+  }
+
+  .footer .desc {
     order: 2;
   }
 

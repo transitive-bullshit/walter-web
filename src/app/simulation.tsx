@@ -27,7 +27,7 @@ export function Simulation() {
   const breakpoint = useBreakpoint()
 
   const initialPosition =
-    breakpoint === 'tablet' ? ([0, 0, 200] as const) : ([0, 0, 20] as const)
+    breakpoint === 'tablet' ? ([0, 0, 200] as const) : ([0, 0, 100] as const)
 
   return (
     <>
@@ -85,7 +85,7 @@ function Rig({ breakpoint }: { breakpoint: string }) {
     if (breakpoint === 'tablet') {
       easing.damp3(
         state.camera.position,
-        [Math.sin(-state.pointer.x) * 5, state.pointer.y * 3.5, 80],
+        [Math.sin(-state.pointer.x) * 20, state.pointer.y * 5, 80],
         0.2,
         delta
       )

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://trywalter.ai"><img alt="Walter" src="/public/logo.png" width="256"></a>
+  <a href="https://trywalter.ai"><img alt="Walter" src="/public/walter-logo.svg" width="256"></a>
 </p>
 
 <p align="center">

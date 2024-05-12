@@ -15,6 +15,7 @@ import { easing } from 'maath'
 import { createBreakpoint } from 'react-use'
 
 import { bootstrap } from '@/lib/bootstrap'
+import * as config from '@/lib/config'
 import inter from '@/lib/inter-regular.woff'
 
 import styles from './page.module.css'
@@ -45,7 +46,7 @@ export function Simulation() {
           angle={0.2}
         />
 
-        <Status position={[0, 0, -10]} />
+        <Status breakpoint={breakpoint} />
 
         <Float floatIntensity={2}>
           <Knot />
@@ -53,7 +54,7 @@ export function Simulation() {
 
         <ContactShadows
           scale={100}
-          position={[0, -7.5, 0]}
+          position={[0, breakpoint === 'tablet' ? -12 : -8, 0]}
           blur={1}
           far={100}
           opacity={0.85}
@@ -82,6 +83,8 @@ export function Simulation() {
 
 function Rig({ breakpoint }: { breakpoint: string }) {
   useFrame((state, delta) => {
+    console.log(state.pointer.x, state.pointer.y)
+
     if (breakpoint === 'tablet') {
       easing.damp3(
         state.camera.position,
@@ -94,7 +97,7 @@ function Rig({ breakpoint }: { breakpoint: string }) {
         state.camera.position,
         [
           Math.sin(-state.pointer.x) * 5,
-          state.pointer.y * 3.5,
+          state.pointer.y * 2,
           15 + Math.cos(state.pointer.x) * 10
         ],
         0.2,
@@ -123,21 +126,37 @@ function Knot(props: any) {
   )
 }
 
-function Status(props: any) {
-  const text = 'Walter'
-  return (
-    <Text
-      fontSize={14}
-      letterSpacing={-0.025}
-      font={inter}
-      color='black'
-      {...props}
-    >
-      {text}
+function Status({ breakpoint, ...props }: any) {
+  const text = config.title
+  const desc = config.description
 
-      <Html style={{ color: 'transparent', fontSize: '33.5em' }} transform>
+  return (
+    <>
+      <Text
+        fontSize={14}
+        letterSpacing={-0.025}
+        font={inter}
+        color='black'
+        position={[0, 0, -10]}
+        {...props}
+      >
         {text}
-      </Html>
-    </Text>
+
+        <Html style={{ color: 'transparent', fontSize: '33.5em' }} transform>
+          {text}
+        </Html>
+      </Text>
+
+      <Text
+        fontSize={breakpoint === 'tablet' ? 2 : 1}
+        letterSpacing={-0.025}
+        font={inter}
+        color='black'
+        position={[0, -8, -10]}
+        {...props}
+      >
+        {desc}
+      </Text>
+    </>
   )
 }

@@ -83,8 +83,6 @@ export function Simulation() {
 
 function Rig({ breakpoint }: { breakpoint: string }) {
   useFrame((state, delta) => {
-    console.log(state.pointer.x, state.pointer.y)
-
     if (breakpoint === 'tablet') {
       easing.damp3(
         state.camera.position,

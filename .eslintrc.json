@@ -3,6 +3,7 @@
   "extends": ["@fisch0920/eslint-config", "next/core-web-vitals"],
   "rules": {
     "no-process-env": "off",
-    "import/no-anonymous-default-export": "off"
+    "import/no-anonymous-default-export": "off",
+    "jsx-a11y/heading-has-content": "off"
   }
 }

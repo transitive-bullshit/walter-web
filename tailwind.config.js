@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-module */
+
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */

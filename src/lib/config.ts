@@ -9,7 +9,7 @@ export const description = 'Agentic recommendations for AI-native products'
 export const domain = 'trywalter.ai'
 
 export const author = 'Agentic'
-export const twitter = 'transitive_bs'
+export const twitter = 'trywalterai'
 export const twitterUrl = `https://twitter.com/${twitter}`
 export const copyright = `Copyright 2024 ${author}`
 export const madeWithLove = 'Made with ❤️ in Brooklyn, NY'

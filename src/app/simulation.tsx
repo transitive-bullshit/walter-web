@@ -101,6 +101,7 @@ function Rig({ breakpoint }: { breakpoint: string }) {
 
     if (breakpoint === 'tablet') {
       easing.damp3(
+        state.camera.position,
         [Math.sin(-x) * 20, y * 5, 80],
         0.2,
         delta

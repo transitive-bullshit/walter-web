@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import { ActiveLink } from '@/components/active-link'
-import { Button } from '@/components/ui/button'
 
 import styles from './page.module.css'
 

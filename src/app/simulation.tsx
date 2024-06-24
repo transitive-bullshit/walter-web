@@ -93,7 +93,7 @@ function Rig({ breakpoint }: { breakpoint: string }) {
       y = state.pointer.y
       foo = Math.acos(x)
     } else {
-      foo += 0.005
+      foo += 0.008
     }
 
     prevX = state.pointer.x
@@ -109,11 +109,7 @@ function Rig({ breakpoint }: { breakpoint: string }) {
     } else {
       easing.damp3(
         state.camera.position,
-        [
-          Math.sin(-x) * 5,
-          y * 2,
-          15 + Math.cos(x) * 10
-        ],
+        [Math.sin(-x) * 5, y * 2, 15 + Math.cos(x) * 10],
         0.2,
         delta
       )

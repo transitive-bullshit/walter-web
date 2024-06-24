@@ -81,12 +81,27 @@ export function Simulation() {
   )
 }
 
+let foo = 0
+let prevX = 0
+let prevY = 0
 function Rig({ breakpoint }: { breakpoint: string }) {
-  useFrame((state, delta) => {
+  useFrame((state: any, delta: number) => {
+    let x = Math.cos(foo)
+    let y = Math.sin(foo)
+    if (prevX !== state.pointer.x || prevY !== state.pointer.y) {
+      x = state.pointer.x
+      y = state.pointer.y
+      foo = Math.acos(x)
+    } else {
+      foo += 0.005
+    }
+
+    prevX = state.pointer.x
+    prevY = state.pointer.y
+
     if (breakpoint === 'tablet') {
       easing.damp3(
-        state.camera.position,
-        [Math.sin(-state.pointer.x) * 20, state.pointer.y * 5, 80],
+        [Math.sin(-x) * 20, y * 5, 80],
         0.2,
         delta
       )
@@ -94,9 +109,9 @@ function Rig({ breakpoint }: { breakpoint: string }) {
       easing.damp3(
         state.camera.position,
         [
-          Math.sin(-state.pointer.x) * 5,
-          state.pointer.y * 2,
-          15 + Math.cos(state.pointer.x) * 10
+          Math.sin(-x) * 5,
+          y * 2,
+          15 + Math.cos(x) * 10
         ],
         0.2,
         delta

@@ -5,7 +5,7 @@ export const isSafari =
   !isServer && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
 export const title = 'Walter'
-export const description = 'Agentic recommendations for AI-native products'
+export const description = 'The discovery platform for AI tools'
 export const domain = 'trywalter.ai'
 
 export const author = 'Agentic'

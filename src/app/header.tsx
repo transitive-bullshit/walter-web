@@ -20,9 +20,9 @@ export function Header() {
         </ActiveLink>
 
         <div className={styles.rhs}>
-          <Button asChild>
+          {/* <Button asChild>
             <ActiveLink href='/signup'>Sign up</ActiveLink>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </header>
